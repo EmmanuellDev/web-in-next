@@ -5,8 +5,8 @@ import {MdLightMode, MdDarkMode} from 'react-icons/md'
 import { useTheme } from 'next-themes'
 
 export default function DarkMode() {
-    const {theme, setTheme, systemTheme} = useTheme();
-    const {mounted, setMounted} = useState(false);
+    const { theme, setTheme, systemTheme } = useTheme();
+    const [mounted, setMounted] = useState(false);
     const currentTheme = theme === 'system' ? systemTheme : theme;
     useEffect(() => setMounted(true), []);
   return (
